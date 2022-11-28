@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("../public/assets/fonts/Play/Play-Bold.eot");
+  src: local("../public/assets/fonts/Play/Play-Bold"),
+    url("../public/assets/fonts/Play/Play-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/fonts/Play/Play-Bold.woff") format("woff"),
+    url("../public/assets/fonts/Play/Play-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("../public/assets/fonts/Play/Play.eot");
+  src: local("../public/assets/fonts/Play/Play"),
+    url("../public/assets/fonts/Play/Play.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/fonts/Play/Play.woff") format("woff"),
+    url("../public/assets/fonts/Play/Play.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
