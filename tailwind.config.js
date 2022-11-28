@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'itembg': "url('/public/assets/itembg.png')",
-        'itemhoverbg': "url('/public/assets/itemhoverbg.png')"
+        'itemhoverbg': "url('/public/assets/itemhoverbg.png')",
+        'launchbg': "url('/public/assets/launchpadbg.png')",
+        'btnbg': "url('/public/assets/launchbtn.png')"
       }
     },
   },

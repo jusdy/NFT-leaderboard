@@ -7,7 +7,7 @@ const menuTitles = [
     },
     {
         title: "Launchpad",
-        linkTo: "/mynfts"
+        linkTo: "/launchpad"
     },
     {
         title: "Leaderboard",
@@ -25,7 +25,7 @@ const menuTitles = [
 
 const Sidebar = () => {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col z-50">
             <div className="w-[300px] h-[120px] bg-[#00072B] border-[3px] border-[#AB40FF] border-b-0 flex">
                 <img className="w-content m-auto" src="assets/logo.png"/>
             </div>
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 </div>
 
                 {
-                    menuTitles.map((item, key) => <MenuItem to={item.linkTo} title={item.title} key={key}/>)
+                    menuTitles.map((item, key) => <MenuItem key={key} to={item.linkTo} title={item.title} index={key}/>)
                 }
             </div>
         </div>

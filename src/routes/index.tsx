@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import AppLayout from 'layout/AppLayout'
 
@@ -10,7 +10,8 @@ const AppRoutes = () => {
     <BrowserRouter>
       <AppLayout>
           <Routes>
-            <Route path='/' element={<LaunchPad/>}></Route>
+            <Route path='/' element={<Navigate to="/launchpad" replace />}></Route>
+            <Route path='/launchpad' element={<LaunchPad/>}></Route>
           </Routes>
       </AppLayout>
     </BrowserRouter>
