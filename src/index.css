@@ -39,3 +39,60 @@ code {
   font-weight: normal;
   font-style: normal;
 }
+
+.carousel .slider-wrapper {
+  display: none;
+}
+
+.carousel-slider {
+  display: none;
+}
+
+.carousel .thumbs-wrapper {
+  margin-left: 100px!important;
+  margin-right: 100px!important;
+}
+
+.carousel .control-arrow {
+  opacity: 1!important;
+  transition: none!important;
+  width: 73px;
+  height: 70px;
+  background-size: cover!important;
+  margin-top: 0!important;
+  top: 0!important;
+}
+
+.carousel .control-next {
+  display: block!important;
+  background-image: url('../public/assets/next.png')!important;
+  
+}
+
+.carousel .control-prev {
+  display: block!important;
+  background-image: url('../public/assets/prev.png')!important;
+}
+
+.carousel .control-arrow::before {
+  content: none!important;
+}
+
+.carousel .thumb {
+  margin-left: 10px;
+  width: 67px!important;
+  height: 70px;
+  opacity: 0.4;
+  border: 3px solid #AB40FF!important;
+  transition: 0.3s!important;
+}
+
+.carousel .thumb:hover {
+  border: 3px solid #AB40FF!important;
+  opacity: 1;
+}
+
+.carousel .selected {
+  opacity: 1;
+  border: 3px solid #AB40FF!important;
+}
