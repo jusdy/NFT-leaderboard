@@ -9,7 +9,7 @@ interface MenuProps {
 const MenuItem = ( props: MenuProps ) => {
     return (
         <Link to={props.to}>
-            <div className={`flex items-center justify-center border-t-[3px] border-[#AB40FF] w-full hover:w-[319px] h-[100px] bg-itembg hover:bg-itemhoverbg hover:bg-cover bg-cover font-play text-white text-2xl ${props.index === 4 ? 'border-b-[3px] hover:border-b-0' : ''}`}>
+            <div className={`flex items-center justify-center border-t-[3px] border-theme w-full hover:w-[319px] h-[100px] bg-itembg hover:bg-itemhoverbg hover:bg-cover bg-cover font-play text-white text-2xl ${props.index === 4 ? 'border-b-[3px] hover:border-b-0' : ''}`}>
                 {props.title}
             </div>
         </Link>

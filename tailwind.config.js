@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      theme: "#AB40FF",
+      white: "#FFFFFF"
+    },
     extend: {
       backgroundImage: {
         'itembg': "url('/public/assets/itembg.png')",
