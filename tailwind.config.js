@@ -10,6 +10,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'itembg': "url('/public/assets/itembg.png')",
         'itemhoverbg': "url('/public/assets/itemhoverbg.png')",
         'launchbg': "url('/public/assets/launchpadbg.png')",
