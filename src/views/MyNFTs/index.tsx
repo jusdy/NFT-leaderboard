@@ -58,17 +58,19 @@ const MyNFTs = () => {
                             <h1 className='text-xl tracking-widest'>Peak Position</h1>
                             <label className='text-[#AB40FF] text-2xl font-bold'>2</label>
                         </div>
+                        <div className='flex flex-col justify-center items-center mb-[50px]'>
+                            <h1 className='text-xl tracking-widest mb-3'>Fuel</h1>
+                            <FuelTank capacity={4}/>
+                        </div>
                         <div className='flex flex-col justify-center items-center mb-[30px]'>
                             <h1 className='text-xl tracking-widest mb-3'>Races</h1>
                             <img src='assets/icons/flag.svg'/>
                         </div>  
-                        <div className='flex flex-col justify-center items-center mb-[60px]'>
+                        <div className='flex flex-col justify-center items-center'>
                             <h1 className='text-xl tracking-widest mb-5'>Trophies</h1>
                             <TrophyBadge rank={2}/>
                         </div>
-                        <div className='flex flex-col justify-center items-center'>
-                            <FuelTank capacity={4}/>
-                        </div>
+
                     </div>
 
                     <div className="flex flex-col w-full bg-[#090314] bg-gradient-radial from-[#264189FF] via-[#090314] to-[#090314]">
@@ -90,7 +92,7 @@ const MyNFTs = () => {
                             <div className='grow'></div>
                             <div className='w-full h-[3px] mb-5 bg-white shadow-[0_0_8px_1px_rgba(18,113,255,1)] rounded-full '/>
                             <div className='flex justify-between'>
-                                <PieChart value={66} title={"Speed"}/>
+                                <PieChart value={33} title={"Speed"}/>
                                 <PieChart value={36} title={"Acceleration"}/>
                                 <PieChart value={16} title={"Handling"}/>
                                 <div className='relative flex flex-col gap-y-[2px]'>
