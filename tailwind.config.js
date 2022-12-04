@@ -20,6 +20,10 @@ module.exports = {
         'nextbtn': "url('/public/assets/next.png')",
       }
     },
+    fontFamily: {
+      'molot': ['Molot'],
+      'play': ['Play']
+    },
   },
   plugins: [],
 }
