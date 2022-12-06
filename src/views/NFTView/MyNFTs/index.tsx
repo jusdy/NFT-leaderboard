@@ -5,7 +5,7 @@ import TrophyBadge from "components/TrophyBadge";
 const MyNFTs = () => {
   return (
     <div className="flex flex-col border-[3px] border-theme border-t-0 w-full h-full">
-      <div className="flex w-full h-[calc(100vh-250px)]">
+      <div className="flex w-full h-[calc(100vh-230px)]">
         <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-[#AA9DDB] border-theme py-[50px]">
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Position</h1>
@@ -77,7 +77,7 @@ const MyNFTs = () => {
         </div>
       </div>
 
-      <div className="shrink-0 w-full h-[100px] bg-theme"></div>
+      <div className="shrink-0 w-full h-[80px] bg-theme"></div>
     </div>
   );
 };
