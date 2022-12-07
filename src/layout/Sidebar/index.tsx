@@ -2,12 +2,12 @@ import MenuItem from './MenuItem';
 
 const menuTitles = [
     {
-        title: "My NFTs",
-        linkTo: "/mynfts"
-    },
-    {
         title: "Launchpad",
         linkTo: "/launchpad"
+    },
+    {
+        title: "NFTs",
+        linkTo: "/mynfts"
     },
     {
         title: "Leaderboard",
@@ -34,6 +34,7 @@ const Sidebar = () => {
                 <div className="h-[150px] flex justify-center items-center gap-x-[50px]">
                     <img src="assets/icons/alert.svg"/>
                     <img src="assets/icons/wallet.svg"/>
+
                 </div>
 
                 {

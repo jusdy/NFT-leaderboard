@@ -18,6 +18,10 @@ module.exports = {
         'listbtn': "url('/public/assets/listbtn.png')",
         'prevbtn': "url('/public/assets/prev.png')",
         'nextbtn': "url('/public/assets/next.png')",
+      },
+
+      backgroundColor: {
+        'transparent' : "transparent"
       }
     },
     fontFamily: {
