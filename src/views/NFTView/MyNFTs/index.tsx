@@ -6,26 +6,26 @@ const MyNFTs = () => {
   return (
     <div className="flex flex-col border-[3px] border-theme border-t-0 w-full h-full">
       <div className="flex w-full h-[calc(100vh-230px)]">
-        <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-[#AA9DDB] border-theme py-[50px]">
+        <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-secondary border-theme py-[50px]">
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Position</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">7</label>
+            <label className="text-theme text-2xl font-bold">7</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Earnings</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">165</label>
+            <label className="text-theme text-2xl font-bold">165</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Points</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">3000</label>
+            <label className="text-theme text-2xl font-bold">3000</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Peak Price</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">1.255</label>
+            <label className="text-theme text-2xl font-bold">1.255</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Peak Position</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">2</label>
+            <label className="text-theme text-2xl font-bold">2</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[50px]">
             <h1 className="text-xl tracking-widest mb-3">Fuel</h1>

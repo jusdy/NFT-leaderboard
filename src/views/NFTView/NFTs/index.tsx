@@ -126,7 +126,7 @@ function Table({
         <thead>
           <tr>
             {headers.map((item, key) =>
-              <th key={key} className="text-2xl font-normal py-[40px] border-2 border-[#AA9DDB]">{item}</th>
+              <th key={key} className="text-2xl font-normal py-[40px] border-2 border-secondary">{item}</th>
             )}
           </tr>
         </thead>
@@ -138,7 +138,7 @@ function Table({
                   return (
                     <td className={`${rowKey % 2 === 0 ? 'bg-[#222550]' : ''}
                         ${cellKey === 1 || cellKey === 4 ? 'text-theme underline decoration-1 underline-offset-2' : ''}
-                        min-w-[150px] py-[15px] text-center border-[2px] border-[#AA9DDB]`} key={cell.id}>
+                        min-w-[150px] py-[15px] text-center border-[2px] border-secondary`} key={cell.id}>
                       { flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -208,7 +208,7 @@ function Table({
           }}
         >
           {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize} className="bg-[#00082F]">
+            <option key={pageSize} value={pageSize} className="bg-darkbg">
               Show {pageSize}
             </option>
           ))}
