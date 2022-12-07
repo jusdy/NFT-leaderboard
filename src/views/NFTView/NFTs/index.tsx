@@ -24,13 +24,13 @@ const NFTs = () => {
         footer: (props) => props.column.id,
         columns: [
           {
-            accessorKey: "firstName",
+            accessorKey: "position",
             cell: (info) => info.getValue(),
             footer: (props) => props.column.id,
           },
           {
-            accessorFn: (row) => row.lastName,
-            id: "lastName",
+            accessorFn: (row) => row.NFTId,
+            id: "NFTId",
             cell: (info) => info.getValue(),
             header: () => <span>Last Name</span>,
             footer: (props) => props.column.id,
@@ -50,13 +50,13 @@ const NFTs = () => {
             header: "More Info",
             columns: [
               {
-                accessorKey: "visits",
-                header: () => <span>Visits</span>,
+                accessorKey: "earnings",
+                header: () => <span>Earnings</span>,
                 footer: (props) => props.column.id,
               },
               {
-                accessorKey: "status",
-                header: "Status",
+                accessorKey: "salePrice",
+                header: "salePrice",
                 footer: (props) => props.column.id,
               },
             ],
@@ -133,11 +133,13 @@ function Table({
         <tbody>
           {table.getRowModel().rows.map((row, rowKey) => {
             return (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell, key) => {
+              <tr key={row.id} className="font-molot text-xl font-normal">
+                {row.getVisibleCells().map((cell, cellKey) => {
                   return (
-                    <td className={`${rowKey % 2 === 0 ? 'bg-[#222550]' : ''} min-w-[150px] py-[15px] text-center border-[2px] border-[#AA9DDB]`} key={cell.id}>
-                      {flexRender(
+                    <td className={`${rowKey % 2 === 0 ? 'bg-[#222550]' : ''}
+                        ${cellKey === 1 || cellKey === 4 ? 'text-theme underline decoration-1 underline-offset-2' : ''}
+                        min-w-[150px] py-[15px] text-center border-[2px] border-[#AA9DDB]`} key={cell.id}>
+                      { flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
