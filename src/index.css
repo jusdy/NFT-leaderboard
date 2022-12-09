@@ -4,11 +4,15 @@
 
 
 .polyborder {
-  clip-path: polygon(7% 0%, 100% 0%, 100% 75%, 93% 100%, 0% 100%, 0% 25%);
+  clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
 }
 
 .tabborder {
   clip-path: polygon(13% 0%, 87% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
+}
+
+.poly-full {
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
 }
 
 .poly-top-left {
@@ -26,6 +30,23 @@
 .poly-bottom-right {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 0%);
 }
+
+.poly-bottom-right-s {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 0%);
+  
+}
+
+/* .poly-bottom-right-s:hover {
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 20px)!important;
+} */
+
+.poly-bottom-right-s2 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0% 0%);
+}
+
+/* .poly-bottom-right-s2:hover {
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 20px)!important;
+} */
 
 body {
   margin: 0;

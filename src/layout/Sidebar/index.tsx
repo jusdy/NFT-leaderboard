@@ -7,7 +7,7 @@ const menuTitles = [
     },
     {
         title: "NFTs",
-        linkTo: "/mynfts"
+        linkTo: "/nfts"
     },
     {
         title: "Leaderboard",
@@ -18,9 +18,9 @@ const menuTitles = [
         linkTo: "/featured"
     },
     {
-        title: "Community Stats",
-        linkTo: "/mynfts"
-    }
+        title: "Tournament",
+        linkTo: "/tournament"
+    },
 ]
 
 const Sidebar = () => {
@@ -30,8 +30,8 @@ const Sidebar = () => {
                 <img className="w-content m-auto" src="assets/logo.png"/>
             </div>
 
-            <div className="bg-[#321A74] w-[300px] h-[calc(100vh-120px)] border-[3px] border-b-0 border-theme flex flex-col">
-                <div className="h-[150px] flex justify-center items-center gap-x-[50px]">
+            <div className="bg-[#321A74] w-[300px] h-[calc(100vh-120px)] border-[3px] border-b-0 border-theme flex flex-col overflow-auto scrollbar">
+                <div className="h-[150px] shrink-0 flex justify-center items-center gap-x-[50px]">
                     <img src="assets/icons/alert.svg"/>
                     <img src="assets/icons/wallet.svg"/>
 
