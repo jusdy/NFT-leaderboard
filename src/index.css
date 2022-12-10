@@ -7,6 +7,14 @@
   clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
 }
 
+.polyborder-s {
+  clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
+}
+
+.polyborder-s2 {
+  clip-path: polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);
+}
+
 .tabborder {
   clip-path: polygon(13% 0%, 87% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
 }
