@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 interface MenuProps {
     title?: string;
@@ -7,10 +8,15 @@ interface MenuProps {
 }
 
 const MenuItem = ( props: MenuProps ) => {
+    const route = useLocation().pathname;
+    const routeName = route.slice(1)
+
     return (
         <Link to={props.to}>
-            <div className={`flex items-center justify-center border-t-[3px] border-theme w-full hover:w-[319px] h-[100px] bg-itembg hover:bg-itemhoverbg hover:bg-cover bg-cover font-play text-white text-2xl ${props.index === 4 ? 'border-b-[3px] hover:border-b-0' : ''}`}>
-                {props.title}
+            <div className={`poly-bottom-right-s bg-theme border-theme border-t-[3px]`}>
+                <div className={`flex items-center justify-center transition-all w-full h-[80px] poly-bottom-right-s2 bg-[#492D90] font-play text-white text-2xl hover:bg-gradient-to-r from-theme to-[#8840FF] ${props.title?.toLowerCase() === routeName.toLowerCase() ? "bg-gradient-to-r"  : ""}`}>
+                    {props.title}
+                </div>
             </div>
         </Link>
     )

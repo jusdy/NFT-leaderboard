@@ -4,24 +4,28 @@ interface TabsProps {
     onTabClick: (index: number) => void;
 }
 
+const tabList = [
+    "My NFTs",
+    "All NFTs",
+    "NFT Ledger"
+]
+
 const Tabs: React.FC<TabsProps> = ({
     onTabClick
 }: TabsProps) => {
     const [tabId, setTabId] = useState<number>(1);
 
-return (
+    return (
         <ul className="flex mr-[30px] text-center text-xl">
-            <li className={`${tabId === 1 ? 'text-white bg-theme' : 'text-[gray] bg-theme/50'} py-2 w-[155px] -mr-[20px] cursor-pointer rounded-t-[10px] tabborder`}
-                onClick={() => {onTabClick(1);setTabId(1)}}
-            >
-                My NFTs
-            </li>
-            <li
-                className={`${tabId === 2 ? 'text-white bg-theme' : 'text-[gray] bg-theme/50'} py-2 w-[155px] cursor-pointer rounded-t-[10px] tabborder`}
-                onClick={() => {onTabClick(2);setTabId(2)}}
-            >
-                NFTs
-            </li>
+            {tabList.map((item, key) => 
+                <li key={key} className={`bg-theme relative py-2 w-[155px] h-[45px] ${key === tabList.length - 1 ? "" : "-mr-[20px]"} cursor-pointer polyborder-s`}
+                    onClick={() => {onTabClick(key + 1);setTabId(key + 1)}}
+                >
+                    <div className={`${tabId === key + 1 ? 'text-white bg-theme z-30' : ' bg-[#292C54] z-0 hover:bg-theme transition-all'} absolute flex items-center justify-center top-[3px] left-[3px] w-[149px] h-[calc(100%-6px)] polyborder-s2`}>
+                        {item}
+                    </div>
+                </li>
+            )}
         </ul>
     )
 }

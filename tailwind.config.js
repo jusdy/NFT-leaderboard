@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     colors: {
       theme: "#AB40FF",
-      white: "#FFFFFF"
+      darkbg: "#00082F",
+      white: "#FFFFFF",
+      secondary: "#AA9DDB"
     },
     extend: {
       backgroundImage: {
@@ -18,6 +20,10 @@ module.exports = {
         'listbtn': "url('/public/assets/listbtn.png')",
         'prevbtn': "url('/public/assets/prev.png')",
         'nextbtn': "url('/public/assets/next.png')",
+      },
+
+      backgroundColor: {
+        'transparent' : "transparent"
       }
     },
     fontFamily: {

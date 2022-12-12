@@ -1,3 +1,4 @@
+import Button from "components/Button";
 import FuelTank from "components/FuelTank";
 import PieChart from "components/PieChart";
 import TrophyBadge from "components/TrophyBadge";
@@ -6,26 +7,26 @@ const MyNFTs = () => {
   return (
     <div className="flex flex-col border-[3px] border-theme border-t-0 w-full h-full">
       <div className="flex w-full h-[calc(100vh-230px)]">
-        <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-[#AA9DDB] border-theme py-[50px]">
+        <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-secondary border-theme py-[50px]">
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Position</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">7</label>
+            <label className="text-theme text-2xl font-bold">7</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Earnings</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">165</label>
+            <label className="text-theme text-2xl font-bold">165</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Points</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">3000</label>
+            <label className="text-theme text-2xl font-bold">3000</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Peak Price</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">1.255</label>
+            <label className="text-theme text-2xl font-bold">1.255</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest">Peak Position</h1>
-            <label className="text-[#AB40FF] text-2xl font-bold">2</label>
+            <label className="text-theme text-2xl font-bold">2</label>
           </div>
           <div className="flex flex-col justify-center items-center mb-[50px]">
             <h1 className="text-xl tracking-widest mb-3">Fuel</h1>
@@ -77,7 +78,15 @@ const MyNFTs = () => {
         </div>
       </div>
 
-      <div className="shrink-0 w-full h-[80px] bg-theme"></div>
+      <div className="shrink-0 w-full h-[100px] flex items-center px-[60px] bg-theme">
+        <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+          <img className="h-full" src="assets/icons/bubble.svg"/>
+          <div className="font-molot text-[#8840FF] text-2xl">
+            <p>BUY</p>
+            <p>FUEL</p>
+          </div>
+        </Button>
+      </div>
     </div>
   );
 };

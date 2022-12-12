@@ -24,13 +24,13 @@ const NFTs = () => {
         footer: (props) => props.column.id,
         columns: [
           {
-            accessorKey: "firstName",
+            accessorKey: "position",
             cell: (info) => info.getValue(),
             footer: (props) => props.column.id,
           },
           {
-            accessorFn: (row) => row.lastName,
-            id: "lastName",
+            accessorFn: (row) => row.NFTId,
+            id: "NFTId",
             cell: (info) => info.getValue(),
             header: () => <span>Last Name</span>,
             footer: (props) => props.column.id,
@@ -50,18 +50,13 @@ const NFTs = () => {
             header: "More Info",
             columns: [
               {
-                accessorKey: "visits",
-                header: () => <span>Visits</span>,
+                accessorKey: "earnings",
+                header: () => <span>Earnings</span>,
                 footer: (props) => props.column.id,
               },
               {
-                accessorKey: "status",
-                header: "Status",
-                footer: (props) => props.column.id,
-              },
-              {
-                accessorKey: "progress",
-                header: "Profile Progress",
+                accessorKey: "salePrice",
+                header: "salePrice",
                 footer: (props) => props.column.id,
               },
             ],
@@ -76,21 +71,21 @@ const NFTs = () => {
   const refreshData = () => setData(() => makeData(100));
 
   return (
-    <>
+    <div className=" w-full h-full overflow-auto scrollbar">
       <Table
         {...{
           data,
           columns,
         }}
       />
-      <hr />
+      {/* <hr />
       <div>
         <button onClick={() => rerender()}>Force Rerender</button>
       </div>
       <div>
         <button onClick={() => refreshData()}>Refresh Data</button>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 };
 
@@ -103,6 +98,8 @@ function Table({
   data: Person[];
   columns: ColumnDef<Person>[];
 }) {
+  const [pageSize, setPage] = useState<number>(10);
+  const [pageIndex, setPageIndex] = useState<number>(1);
   const table = useReactTable({
     data,
     columns,
@@ -114,43 +111,37 @@ function Table({
     debugTable: true,
   });
 
+  const headers = [
+    "POSITION",
+    "NFT ID",
+    "POINTS",
+    "EARNINGS",
+    "SALE/PRICE",
+  ]
+
   return (
-    <div className="p-2">
-      <div className="h-2" />
-      <table>
+    <div className="flex flex-col pt-[20px]">
+
+      <h1 className="font-molot text-4xl text-center">NFT LEDGER</h1>
+
+      <table className="mt-[30px]">
         <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <th key={header.id} colSpan={header.colSpan}>
-                    {header.isPlaceholder ? null : (
-                      <div>
-                        {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                        {/* {header.column.getCanFilter() ? (
-                          <div>
-                            <Filter column={header.column} table={table} />
-                          </div>
-                        ) : null} */}
-                      </div>
-                    )}
-                  </th>
-                );
-              })}
-            </tr>
-          ))}
+          <tr>
+            {headers.map((item, key) =>
+              <th key={key} className="text-2xl font-normal py-[40px] border-2 border-secondary">{item}</th>
+            )}
+          </tr>
         </thead>
         <tbody>
-          {table.getRowModel().rows.map((row) => {
+          {table.getRowModel().rows.map((row, rowKey) => {
             return (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => {
+              <tr key={row.id} className="font-molot text-xl font-normal">
+                {row.getVisibleCells().map((cell, cellKey) => {
                   return (
-                    <td key={cell.id}>
-                      {flexRender(
+                    <td className={`${rowKey % 2 === 0 ? 'bg-[#222550]' : ''}
+                        ${cellKey === 1 || cellKey === 4 ? 'text-theme underline decoration-1 underline-offset-2' : ''}
+                        min-w-[150px] py-[15px] text-center border-[2px] border-secondary`} key={cell.id}>
+                      { flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
@@ -163,7 +154,7 @@ function Table({
         </tbody>
       </table>
       <div className="h-2" />
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         <button
           className="border rounded p-1"
           onClick={() => table.setPageIndex(0)}
@@ -203,29 +194,34 @@ function Table({
           | Go to page:
           <input
             type="number"
-            defaultValue={table.getState().pagination.pageIndex + 1}
+            // defaultValue={table.getState().pagination.pageIndex + 1}
+            value={pageIndex}
             onChange={(e) => {
+              if(Number(e.target.value) < 1 || Number(e.target.value) > (100 / pageSize)) return;
+              setPageIndex(Number(e.target.value))
               const page = e.target.value ? Number(e.target.value) - 1 : 0;
               table.setPageIndex(page);
             }}
-            className="border p-1 rounded w-16"
+            className="border p-1 rounded w-16 bg-transparent"
           />
         </span>
         <select
+          className="bg-transparent"
           value={table.getState().pagination.pageSize}
           onChange={(e) => {
+            setPage(Number(e.target.value));
             table.setPageSize(Number(e.target.value));
           }}
         >
           {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
+            <option key={pageSize} value={pageSize} className="bg-darkbg">
               Show {pageSize}
             </option>
           ))}
         </select>
       </div>
-      <div>{table.getRowModel().rows.length} Rows</div>
-      <pre>{JSON.stringify(table.getState().pagination, null, 2)}</pre>
+      {/* <div>{table.getRowModel().rows.length} Rows</div>
+      <pre>{JSON.stringify(table.getState().pagination, null, 2)}</pre> */}
     </div>
   );
 }

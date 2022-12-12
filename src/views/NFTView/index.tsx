@@ -30,7 +30,7 @@ const NFTView = () => {
     }
 
     return (
-        <div className="flex flex-col bg-[#00082F] w-full h-[100vh] py-[35px] px-[70px] text-white">
+        <div className="flex flex-col bg-darkbg w-full h-[100vh] py-[35px] px-[70px] text-white">
             <div className="flex items-end h-[80px] shrink-0">
                 <Tabs onTabClick={onTabClick}/>
                 {/* <button className="bg-listbtn w-[240px] h-[70px] mr-[50px] text-white text-2xl">Toogle Listed</button> */}
@@ -46,7 +46,7 @@ const NFTView = () => {
             </div>
 
             {tabId === 1 && <MyNFTs/>}
-            {tabId === 2 && <NFTs/>}
+            {tabId === 3 && <NFTs/>}
         </div>
     )
 }
