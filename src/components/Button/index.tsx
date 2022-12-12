@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
             }}
         >
             <div
-                className={`polyborder ${className} flex justify-center items-center font-molot !font-normal tracking-wider`}
+                className={`polyborder flex justify-center items-center font-molot !font-normal tracking-wider`}
                 style={{
                     width: width - 10,
                     height: height - 10,

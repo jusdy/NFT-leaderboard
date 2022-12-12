@@ -16,9 +16,9 @@ const TrophyRanking = ( props: PropsType ) => {
 
             <div className="flex h-[calc(100%-80px)] justify-center items-end">
                 <div className="flex max-w-[600px] items-end">
-                    <Trophy id={2} rank={2}/>
-                    <Trophy id={1} rank={1}/>
-                    <Trophy id={3} rank={3}/>
+                    <Trophy id={12} rank={2}/>
+                    <Trophy id={11} rank={1}/>
+                    <Trophy id={13} rank={3}/>
                 </div>
             </div>
         </Wrapper>

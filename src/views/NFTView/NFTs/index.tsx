@@ -98,6 +98,8 @@ function Table({
   data: Person[];
   columns: ColumnDef<Person>[];
 }) {
+  const [pageSize, setPage] = useState<number>(10);
+  const [pageIndex, setPageIndex] = useState<number>(1);
   const table = useReactTable({
     data,
     columns,
@@ -192,8 +194,11 @@ function Table({
           | Go to page:
           <input
             type="number"
-            defaultValue={table.getState().pagination.pageIndex + 1}
+            // defaultValue={table.getState().pagination.pageIndex + 1}
+            value={pageIndex}
             onChange={(e) => {
+              if(Number(e.target.value) < 1 || Number(e.target.value) > (100 / pageSize)) return;
+              setPageIndex(Number(e.target.value))
               const page = e.target.value ? Number(e.target.value) - 1 : 0;
               table.setPageIndex(page);
             }}
@@ -204,6 +209,7 @@ function Table({
           className="bg-transparent"
           value={table.getState().pagination.pageSize}
           onChange={(e) => {
+            setPage(Number(e.target.value));
             table.setPageSize(Number(e.target.value));
           }}
         >

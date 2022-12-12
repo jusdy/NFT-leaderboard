@@ -6,7 +6,10 @@ export enum Direction {
     TopLeft,
     TopRight,
     BottomLeft,
+    BottomLeft2,
     BottomRight,
+    BottomRight2,
+    None
 }
 
 const Featured = () => {
