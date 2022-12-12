@@ -5,7 +5,7 @@ const LaunchPad = () => {
         <div className="relative flex flex-col justify-between w-full h-[100vh] px-[200px] py-[100px]">
             
             <img className="mx-auto" src="assets/intro.png"/>
-            <Button className="text-white text-5xl font-bold mx-auto"
+            <Button className="text-white text-5xl font-bold m-auto"
                 width={450}
                 height={100}
                 bg1={"#DC104F"}

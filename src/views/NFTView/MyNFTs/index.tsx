@@ -1,3 +1,4 @@
+import Button from "components/Button";
 import FuelTank from "components/FuelTank";
 import PieChart from "components/PieChart";
 import TrophyBadge from "components/TrophyBadge";
@@ -77,7 +78,15 @@ const MyNFTs = () => {
         </div>
       </div>
 
-      <div className="shrink-0 w-full h-[80px] bg-theme"></div>
+      <div className="shrink-0 w-full h-[100px] flex items-center px-[60px] bg-theme">
+        <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+          <img className="h-full" src="assets/icons/bubble.svg"/>
+          <div className="font-molot text-[#8840FF] text-2xl">
+            <p>BUY</p>
+            <p>FUEL</p>
+          </div>
+        </Button>
+      </div>
     </div>
   );
 };
