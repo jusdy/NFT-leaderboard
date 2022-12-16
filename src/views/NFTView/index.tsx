@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Tabs from 'components/Tabs';
 import MyNFTs from './MyNFTs';
 import NFTs from './NFTs';
+import Ledger from './Ledger';
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -46,7 +47,8 @@ const NFTView = () => {
             </div>
 
             {tabId === 1 && <MyNFTs/>}
-            {tabId === 3 && <NFTs/>}
+            {tabId === 2 && <NFTs/>}
+            {tabId === 3 && <Ledger/>}
         </div>
     )
 }

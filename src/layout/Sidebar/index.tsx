@@ -23,6 +23,10 @@ const menuTitles = [
         title: "Tournament",
         linkTo: "/tournament"
     },
+    {
+        title: "Community Stats",
+        linkTo: "/comstats"
+    },
 ]
 
 const Sidebar = () => {
@@ -44,7 +48,7 @@ const Sidebar = () => {
                 }
                 </div>
 
-                <div className='py-[40px] flex flex-col justify-center items-center gap-y-[15px] border-t-[3px] border-theme'>
+                <div className='py-[30px] flex flex-col justify-center items-center gap-y-[15px] border-t-[3px] border-theme'>
                     <Button bg1='#3150F2' bg2='#1271FF' className='!font-play text-white py-[10px] text-xl' height={50}>NFT Generator</Button>
                     <Link to={'#'} className="text-[#1271FF] underline underline-offset-8 text-2xl">How To Play</Link>
                     <Link to={'#'} className="text-[#1271FF] underline underline-offset-4 text-2xl">FAQ</Link>
