@@ -1,11 +1,16 @@
+import { useState } from 'react';
+import FuelPurchase from 'components/FuelPurchase';
 import Button from "components/Button";
 import FuelTank from "components/FuelTank";
 import PieChart from "components/PieChart";
 import TrophyBadge from "components/TrophyBadge";
 
 const MyNFTs = () => {
+  const [isFuelPurchase, setFuelPurchase] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col border-[3px] border-theme border-t-0 w-full h-full">
+      <FuelPurchase isOpen={isFuelPurchase} onClose={() => setFuelPurchase(false)}></FuelPurchase>
       <div className="flex w-full h-[calc(100vh-250px)]">
         <div className="flex flex-col items-center overflow-auto scrollbar shrink-0 w-[290px] border-r-[3px] bg-opacity-20 bg-secondary border-theme py-[50px]">
           <div className="flex flex-col justify-center items-center mb-[30px]">
@@ -30,7 +35,9 @@ const MyNFTs = () => {
           </div>
           <div className="flex flex-col justify-center items-center mb-[50px]">
             <h1 className="text-xl tracking-widest mb-3">Fuel</h1>
-            <FuelTank capacity={4} />
+            <FuelTank quantity={2} capacity={4}>
+
+            </FuelTank>
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest mb-3">Races</h1>
@@ -80,7 +87,7 @@ const MyNFTs = () => {
 
       <div className="shrink-0 w-full h-[100px] flex items-center pl-[60px] bg-theme">
         <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
-          <img className="h-full" src="assets/icons/bubble.svg"/>
+          <img className="h-full" src="assets/icons/fuelbox.svg"/>
           <div className="font-molot text-[#8840FF] text-2xl">
             <p>BUY</p>
             <p>FUEL</p>
@@ -93,6 +100,12 @@ const MyNFTs = () => {
           </Button>
           <Button width={250} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FF0B3B">
               <p className="font-molot text-white text-2xl">LAUNCH GAME</p>
+          </Button>
+          <Button width={200} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+              <p className="font-molot text-[#8840FF] text-2xl">TRANSFER</p>
+          </Button>
+          <Button width={80} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
+              <img src='assets/icons/fire.svg'/>
           </Button>
         </div>
       </div>

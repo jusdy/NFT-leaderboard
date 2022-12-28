@@ -10,6 +10,7 @@ const LaunchPad = () => {
                 height={100}
                 bg1={"#DC104F"}
                 bg2={"#FF0B3B"}
+                mxauto
             >
                 Launch Game
             </Button>

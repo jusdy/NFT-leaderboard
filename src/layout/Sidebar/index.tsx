@@ -1,6 +1,7 @@
 import Button from 'components/Button';
 import MenuItem from './MenuItem';
 import { Link } from 'react-router-dom';
+import AlarmBadge from 'components/AlarmBadge';
 
 const menuTitles = [
     {
@@ -38,9 +39,8 @@ const Sidebar = () => {
 
             <div className="bg-[#321A74] w-[300px] h-[calc(100vh-120px)] border-[3px] border-b-0 border-theme flex flex-col">
                 <div className="h-[150px] shrink-0 flex justify-center items-center gap-x-[50px]">
-                    <img src="assets/icons/alert.svg"/>
+                    <AlarmBadge badgeCount={20}/>
                     <img src="assets/icons/wallet.svg"/>
-
                 </div>
                 <div className='overflow-auto scrollbar'>
                 {
