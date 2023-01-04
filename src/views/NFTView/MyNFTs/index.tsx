@@ -41,7 +41,7 @@ const MyNFTs = () => {
           </div>
           <div className="flex flex-col justify-center items-center mb-[30px]">
             <h1 className="text-xl tracking-widest mb-3">Races</h1>
-            <img src="assets/icons/flag.svg" />
+            <img alt="" src="assets/icons/flag.svg" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-xl tracking-widest mb-5">Trophies</h1>
@@ -57,7 +57,7 @@ const MyNFTs = () => {
             </div>
 
             <div className="flex gap-x-[20px] items-center">
-              <img src="assets/icons/token.svg" />
+              <img alt="" src="assets/icons/token.svg" />
               <div>
                 <label className="font-bold text-4xl">3.25 </label>
                 <label className="text-lg">CRZ</label>
@@ -75,7 +75,7 @@ const MyNFTs = () => {
                 <label className="text-xl tracking-widest text-center">
                   Rarity
                 </label>
-                <img className="w-[100px]" src="assets/icons/rarity.svg" />
+                <img alt="" className="w-[100px]" src="assets/icons/rarity.svg" />
                 <label className="absolute top-[47px] left-[38px] font-bold text-4xl">
                   1
                 </label>
@@ -87,7 +87,7 @@ const MyNFTs = () => {
 
       <div className="shrink-0 w-full h-[100px] flex items-center pl-[60px] bg-theme">
         <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
-          <img className="h-full" src="assets/icons/fuelbox.svg"/>
+          <img alt="" className="h-full" src="assets/icons/fuelbox.svg"/>
           <div className="font-molot text-[#8840FF] text-2xl">
             <p>BUY</p>
             <p>FUEL</p>
@@ -105,7 +105,7 @@ const MyNFTs = () => {
               <p className="font-molot text-[#8840FF] text-2xl">TRANSFER</p>
           </Button>
           <Button width={80} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FFFFFF">
-              <img src='assets/icons/fire.svg'/>
+              <img alt="" src='assets/icons/fire.svg'/>
           </Button>
         </div>
       </div>

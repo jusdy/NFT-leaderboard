@@ -39,7 +39,7 @@ const NFTView = () => {
                     <Carousel className='grow w-0 h-[80px] mb-[10px]' showArrows={true} onClickThumb={(e) => console.log(e)}>
                     {carList.map((item, key) =>
                         <div key={key}>
-                            <img src={item.image}/>
+                            <img alt="" src={item.image}/>
                         </div>
                     )}
                     </Carousel>

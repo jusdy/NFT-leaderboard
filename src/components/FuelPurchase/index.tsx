@@ -32,11 +32,11 @@ const FuelPurchase = ({
         contentLabel="Example Modal"
       >
         <button className="absolute top-0 right-0 bg-theme w-[50px] h-[50px] flex justify-center items-center" onClick={onClose}>
-            <img src="assets/icons/close.svg"/>
+            <img alt="" src="assets/icons/close.svg"/>
         </button>
 
         <div className="flex gap-x-4 mb-[50px]">
-            <img src="assets/icons/fuelbox2.svg"/>
+            <img alt="" src="assets/icons/fuelbox2.svg"/>
             <div className="flex flex-col">
                 <p className="text-white font-molot text-3xl tracking-widest">fill tank-nft 121</p>
                 <p className="text-[#1271FF] text-xl">1 tank = 5 races</p>
@@ -57,7 +57,7 @@ const FuelPurchase = ({
         </Button>
         <p className="text-[#1271FF] text-xl mb-[20px]">20% discounted</p>
 
-        <img src="assets/fuel.png" className="absolute bottom-0 right-0 -z-[1]"/>
+        <img alt="" src="assets/fuel.png" className="absolute bottom-0 right-0 -z-[1]"/>
 
       </Modal>
     </div>

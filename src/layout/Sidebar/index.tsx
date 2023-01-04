@@ -34,13 +34,13 @@ const Sidebar = () => {
     return (
         <div className="flex flex-col z-50">
             <div className="w-[300px] h-[120px] bg-[#00072B] border-[3px] border-theme border-y-0 flex">
-                <img className="w-content m-auto" src="assets/logo.png"/>
+                <img alt="logo" className="w-content m-auto" src="assets/logo.png"/>
             </div>
 
             <div className="bg-[#321A74] w-[300px] h-[calc(100vh-120px)] border-[3px] border-b-0 border-theme flex flex-col">
                 <div className="h-[150px] shrink-0 flex justify-center items-center gap-x-[50px]">
                     <AlarmBadge badgeCount={20}/>
-                    <img src="assets/icons/wallet.svg"/>
+                    <img alt="" src="assets/icons/wallet.svg"/>
                 </div>
                 <div className='overflow-auto scrollbar'>
                 {
