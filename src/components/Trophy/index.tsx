@@ -12,7 +12,7 @@ const Trophy = (props: TrophyProps) => {
                 "top-[calc(22%)] left-[calc(50%-15px)]"}
                 absolute text-white font-bold underline`}>#{props.id}</span>
 
-            <img className="" src={"assets/rank" + props.rank + ".png"}/>
+            <img alt="" className="" src={"assets/rank" + props.rank + ".png"}/>
         </div>
     )
 }
