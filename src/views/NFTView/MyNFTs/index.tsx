@@ -86,7 +86,7 @@ const MyNFTs = () => {
       </div>
 
       <div className="shrink-0 w-full h-[100px] flex items-center pl-[60px] bg-theme">
-        <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+        <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
           <img className="h-full" src="assets/icons/fuelbox.svg"/>
           <div className="font-molot text-[#8840FF] text-2xl">
             <p>BUY</p>
@@ -104,7 +104,7 @@ const MyNFTs = () => {
           <Button width={200} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
               <p className="font-molot text-[#8840FF] text-2xl">TRANSFER</p>
           </Button>
-          <Button width={80} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
+          <Button width={80} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FFFFFF">
               <img src='assets/icons/fire.svg'/>
           </Button>
         </div>
