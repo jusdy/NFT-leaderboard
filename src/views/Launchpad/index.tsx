@@ -11,6 +11,13 @@ const LaunchPad = () => {
                 bg1={"#DC104F"}
                 bg2={"#FF0B3B"}
                 mxauto
+                onClick={() => {
+                    window.open(
+                      'http://3.237.103.239/CroozeNFT/',
+                      '_blank',
+                      'noopener,noreferrer'
+                    )
+                }}
             >
                 Launch Game
             </Button>

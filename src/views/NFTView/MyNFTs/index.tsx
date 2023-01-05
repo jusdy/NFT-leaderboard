@@ -98,7 +98,12 @@ const MyNFTs = () => {
           <Button width={170} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
               <p className="font-molot text-[#8840FF] text-2xl">SELL</p>
           </Button>
-          <Button width={250} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FF0B3B">
+          <Button width={250} height={70} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FF0B3B" onClick={() => {
+            window.open(
+              'http://3.237.103.239/CroozeNFT/',
+              '_blank',
+              'noopener,noreferrer'
+          )}}>
               <p className="font-molot text-white text-2xl">LAUNCH GAME</p>
           </Button>
           <Button width={200} height={70} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
