@@ -2,6 +2,8 @@ import Button from 'components/Button';
 import MenuItem from './MenuItem';
 import { Link } from 'react-router-dom';
 import AlarmBadge from 'components/AlarmBadge';
+import { RootState } from 'store';
+import { useSelector } from 'react-redux';
 
 const menuTitles = [
     {
@@ -31,6 +33,8 @@ const menuTitles = [
 ]
 
 const Sidebar = () => {
+    const isMenu = useSelector((state: RootState) => state.menuReducer.isMenu)
+
     return (
         <div className="flex flex-col z-50">
             <div className="w-[300px] h-[120px] bg-[#00072B] border-[3px] border-theme border-y-0 flex">
