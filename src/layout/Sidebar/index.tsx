@@ -48,11 +48,11 @@ const Sidebar = () => {
             <div onClick={onLayerClick} className='absolute w-[100vw] h-[100vh] bg-[#000000] bg-opacity-40 z-10'/>
         }
         <div className={`flex flex-col z-50 lg:relative fixed transition-all duration-500 lg:left-0 ${isMenu ? "left-0" : " -left-[240px]"}`}>
-            <div className="lg:w-[300px] w-[240px] h-[120px] bg-[#00072B] border-[3px] border-theme border-t-0 lg:flex hidden">
+            <div className="xl:w-[300px] w-[240px] h-[120px] bg-[#00072B] border-[3px] border-theme border-t-0 lg:flex hidden">
                 <img alt="logo" className="w-content m-auto" src="assets/logo.png"/>
             </div>
 
-            <div className="bg-[#321A74] z-20 lg:bg-opacity-100 bg-opacity-80 lg:backdrop-blur-none backdrop-blur lg:w-[300px] w-[240px] lg:h-[calc(100vh-120px)] h-[100vh] border-[3px] border-y-0 border-theme flex flex-col">
+            <div className="bg-[#321A74] z-20 lg:bg-opacity-100 bg-opacity-50 lg:backdrop-blur-none backdrop-blur xl:w-[300px] w-[240px] lg:h-[calc(100vh-120px)] h-[100vh] border-[3px] border-y-0 border-theme flex flex-col">
                 <div className="lg:h-[150px] h-[100px] shrink-0 flex justify-center items-center gap-x-[50px]">
                     <AlarmBadge badgeCount={20}/>
                     <img alt="" className='lg:w-[64px] w-[50px]' src="assets/icons/wallet.svg"/>

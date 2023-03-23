@@ -9,7 +9,7 @@ const Header = () => {
     } 
 
     return (
-        <div className="md:hidden flex justify-between items-center fixed w-full h-[70px] border-b-2 border-theme bg-darkbg px-[30px] z-10">
+        <div className="lg:hidden flex justify-between items-center fixed w-full h-[70px] border-b-2 border-theme bg-darkbg px-[30px] z-50">
             <img onClick={onMenuClick} className="w-6" alt="" src="assets/icons/menu.svg"/>
             <img className="h-[50px]" alt="" src="assets/logo.png"/>
         </div>

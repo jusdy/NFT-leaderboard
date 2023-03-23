@@ -11,6 +11,14 @@
   clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
 }
 
+.polyborder-tiny {
+  clip-path: polygon(5px 0%, 100% 0%, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0% 100%, 0% 5px);
+}
+
+.polyborder-tiny2 {
+  clip-path: polygon(4px 0%, 100% 0%, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0% 100%, 0% 4px);
+}
+
 .polyborder-s2 {
   clip-path: polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);
 }
@@ -186,4 +194,12 @@ code {
 
 .ReactModal__Content {
   border: 3px solid #AB40FF!important;
+}
+
+@media ( max-width: 1376px ) {
+
+  .carousel .thumbs-wrapper {
+    margin-left: 80px!important;
+    margin-right: 80px!important;
+  }
 }
