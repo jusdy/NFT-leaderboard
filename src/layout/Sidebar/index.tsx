@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import AlarmBadge from 'components/AlarmBadge';
 import { RootState } from 'store';
 import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'hooks';
+import { setMenuStatus } from 'store/menu/action';
 
 const menuTitles = [
     {
@@ -33,18 +35,27 @@ const menuTitles = [
 ]
 
 const Sidebar = () => {
+    const dispatch = useAppDispatch();
     const isMenu = useSelector((state: RootState) => state.menuReducer.isMenu)
+    const onLayerClick = () => {
+        dispatch(setMenuStatus());
+    }
 
     return (
-        <div className="flex flex-col z-50">
-            <div className="w-[300px] h-[120px] bg-[#00072B] border-[3px] border-theme border-y-0 flex">
+        <>
+        {
+            isMenu && 
+            <div onClick={onLayerClick} className='absolute w-[100vw] h-[100vh] bg-[#000000] bg-opacity-40 z-10'/>
+        }
+        <div className={`flex flex-col z-50 lg:relative fixed transition-all duration-500 lg:left-0 ${isMenu ? "left-0" : " -left-[240px]"}`}>
+            <div className="xl:w-[300px] w-[240px] h-[120px] bg-[#00072B] border-[3px] border-theme border-t-0 lg:flex hidden">
                 <img alt="logo" className="w-content m-auto" src="assets/logo.png"/>
             </div>
 
-            <div className="bg-[#321A74] w-[300px] h-[calc(100vh-120px)] border-[3px] border-b-0 border-theme flex flex-col">
-                <div className="h-[150px] shrink-0 flex justify-center items-center gap-x-[50px]">
+            <div className="bg-[#321A74] z-20 lg:bg-opacity-100 bg-opacity-50 lg:backdrop-blur-none backdrop-blur xl:w-[300px] w-[240px] lg:h-[calc(100vh-120px)] h-[100vh] border-[3px] border-y-0 border-theme flex flex-col">
+                <div className="lg:h-[150px] h-[100px] shrink-0 flex justify-center items-center gap-x-[50px]">
                     <AlarmBadge badgeCount={20}/>
-                    <img alt="" src="assets/icons/wallet.svg"/>
+                    <img alt="" className='lg:w-[64px] w-[50px]' src="assets/icons/wallet.svg"/>
                 </div>
                 <div className='overflow-auto scrollbar'>
                 {
@@ -59,6 +70,7 @@ const Sidebar = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

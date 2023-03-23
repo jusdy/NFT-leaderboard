@@ -9,8 +9,8 @@ interface ChartProps {
 const PieChart = (props: ChartProps) => {
     return (
         <div className='flex flex-col items-center gap-y-[10px] tracking-widest'>
-            <label className='text-white text-xl text-center'>{props.title}</label>
-            <div className='relative w-[80px] h-[80px] rounded-full shadow-[0_0_8px_2px_rgba(18,113,255,1)]'>
+            <label className='text-white md:text-xl sm:text-md text-xs text-center'>{props.title}</label>
+            <div className='relative md:w-[80px] md:h-[80px] w-[40px] h-[40px] rounded-full shadow-[0_0_8px_2px_rgba(18,113,255,1)]'>
                 <CircularProgressbar
                     value={props.value}
                     strokeWidth={20}
@@ -22,7 +22,7 @@ const PieChart = (props: ChartProps) => {
                     })}
                 />
 
-                <div className='absolute top-[15px] left-[15px] w-[50px] h-[50px] rounded-full shadow-[0_0_10px_1px_rgba(18,113,255,1)_inset]'/>
+                <div className='absolute md:top-[15px] md:left-[15px] top-[9px] left-[9px] md:w-[50px] md:h-[50px] w-[22px] h-[22px] rounded-full shadow-[0_0_10px_1px_rgba(18,113,255,1)_inset]'/>
             </div>
         </div>
     )

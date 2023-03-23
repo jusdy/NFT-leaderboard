@@ -31,12 +31,11 @@ const NFTView = () => {
     }
 
     return (
-        <div className="flex flex-col bg-darkbg w-full h-[100vh] py-[35px] px-[70px] text-white">
-            <div className="flex items-end h-[80px] shrink-0">
+        <div className="flex flex-col bg-darkbg w-full xl:h-[100vh] h-fit lg:py-[35px] pt-[90px] pb-[20px] 2xl:px-[70px] md:px-[50px] px-[20px] text-white">
+            <div className="flex xl:flex-row flex-col xl:items-end items-start xl:h-[80px] h-fit shrink-0">
                 <Tabs onTabClick={onTabClick}/>
-                {/* <button className="bg-listbtn w-[240px] h-[70px] mr-[50px] text-white text-2xl">Toogle Listed</button> */}
                 {tabId === 1 &&
-                    <Carousel className='grow w-0 h-[80px] mb-[10px]' showArrows={true} onClickThumb={(e) => console.log(e)}>
+                    <Carousel className='grow xl:w-0 lg:w-[600px] w-full h-[80px] mb-[10px]' showArrows={true} onClickThumb={(e) => console.log(e)}>
                     {carList.map((item, key) =>
                         <div key={key}>
                             <img alt="" src={item.image}/>
