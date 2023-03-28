@@ -46,7 +46,11 @@ const NFTView = () => {
             </div>
 
             {tabId === 1 && <MyNFTs/>}
-            {tabId === 2 && <NFTs/>}
+            {tabId === 2 &&
+            <div className='h-[calc(100vh-175px)]'>
+                <NFTs/>
+            </div>
+            }
             {tabId === 3 && <Ledger/>}
         </div>
     )

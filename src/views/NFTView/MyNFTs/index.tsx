@@ -49,7 +49,12 @@ const MyNFTs = () => {
             <TrophyBadge rank={2} />
           </div>
 
-          <Button width={100} height={40} className1="sm:hidden block" className="gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
+          <Button
+          className1="sm:hidden block"
+          className="gap-x-4 py-[10px]"
+          customClass1='w-[100px] h-[40px] bg-[#8840FF]'
+          customClass2='w-[94px] h-[34px] bg-[#FFFFFF]'
+          onClick={() => setFuelPurchase(true)}>
           <img alt="" className="h-full" src="assets/icons/fuelbox.svg"/>
           <div className="font-molot text-[#8840FF] text-xs">
             <p>BUY</p>
@@ -58,8 +63,8 @@ const MyNFTs = () => {
         </Button>
         </div>
 
-        <div className="flex flex-col w-full bg-[#090314] bg-gradient-radial xl:order-2 order-1 from-[#264189FF] via-[#090314] to-[#090314]">
-          <div className="flex items-center md:px-[50px] px-[20px] justify-between w-full h-[80px] bg-theme">
+        <div className="flex flex-col w-full bg-transparent xl:order-2 order-1"> {/* bg-gradient-radial from-[#264189FF] via-[#090314] to-[#090314] */}
+          <div className="flex items-center md:px-[50px] px-[20px] justify-between w-full sm:h-[80px] h-[50px] bg-theme">
             <div className="">
               <span className="font-bold md:text-4xl text-2xl">#53</span>
               <span className="text-lg"> ID</span>
@@ -74,20 +79,24 @@ const MyNFTs = () => {
             </div>
           </div>
           <div className="flex flex-col h-full w-full py-[40px] md:px-[100px] px-[25px]">
-            <div className="grow"></div>
-            <div className="w-full h-[3px] mb-5 bg-white shadow-[0_0_8px_1px_rgba(18,113,255,1)] rounded-full " />
+            {/* <div className="w-full h-[3px] mb-5 bg-white shadow-[0_0_8px_1px_rgba(18,113,255,1)] rounded-full " /> */}
             <div className="flex justify-between">
               <PieChart value={33} title={"Speed"} />
               <PieChart value={36} title={"Acceleration"} />
               <PieChart value={16} title={"Handling"} />
               <RarityBar/>
             </div>
+            <div className="grow"></div>
           </div>
         </div>
       </div>
 
       <div className="shrink-0 w-full h-[100px] flex items-center sm:pl-[60px] bg-theme">
-        <Button width={170} height={70} className1="sm:block hidden" className="gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF" onClick={() => setFuelPurchase(true)}>
+        <Button className1="sm:block hidden"
+        customClass1='w-[170px] h-[70px] bg-[#8840FF]'
+        customClass2='w-[164px] h-[64px] bg-[#FFFFFF]'
+        className="gap-x-4 py-[10px]"
+        onClick={() => setFuelPurchase(true)}>
           <img alt="" className="h-full" src="assets/icons/fuelbox.svg"/>
           <div className="font-molot text-[#8840FF] text-2xl">
             <p>BUY</p>
@@ -96,7 +105,11 @@ const MyNFTs = () => {
         </Button>
 
         <div className="w-full flex justify-center sm:gap-x-[50px] gap-x-[15px]">
-          <Button width={window.innerWidth > 1024 ? 250 : 100 } height={window.innerWidth > 1024 ? 70 : 40} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FF0B3B" onClick={() => {
+          <Button
+            customClass1='lg:w-[250px] w-[100px] lg:h-[70px] h-[40px] bg-[#DC104F]'
+            customClass2='lg:w-[244px] w-[94px] lg:h-[64px] h-[34px] bg-[#FF0B3B]'
+            className="flex gap-x-4 py-[10px]"
+            onClick={() => {
             window.open(
               'http://3.237.103.239/CroozeNFT/',
               '_blank',
@@ -104,14 +117,25 @@ const MyNFTs = () => {
           )}}>
               <p className="font-molot text-white lg:text-2xl text-xs">LAUNCH GAME</p>
           </Button>
-          <Button width={window.innerWidth > 1024 ? 200 : 60} height={window.innerWidth > 1024 ? 70 : 40} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+          <Button
+            className="flex gap-x-4 py-[10px]"
+            customClass1='lg:w-[200px] w-[60px] lg:h-[70px] h-[40px] bg-[#8840FF]'
+            customClass2='lg:w-[194px] w-[54px] lg:h-[64px] h-[34px] bg-[#FFFFFF]'
+          >
               <p className="font-molot text-[#8840FF] lg:text-2xl text-xs">SELL</p>
           </Button>
-          <Button width={window.innerWidth > 1024 ? 80 : 40} height={window.innerWidth > 1024 ? 80 : 40} className="flex gap-x-4 py-[10px]" bg1="#DC104F" bg2="#FFFFFF">
+          <Button
+            customClass1='lg:w-[80px] w-[40px] lg:h-[70px] h-[40px] bg-[#DC104F]'
+            customClass2='lg:w-[74px] w-[34px] lg:h-[64px] h-[34px] bg-[#FFFFFF]'
+            className="flex gap-x-4 py-[10px]"
+          >
               <img className='lg:w-7 w-4' alt="" src='assets/icons/fire.svg'/>
           </Button>
 
-          <Button width={window.innerWidth > 1024 ? 80 : 40} height={window.innerWidth > 1024 ? 80 : 40} className="flex gap-x-4 py-[10px]" bg1="#8840FF" bg2="#FFFFFF">
+          <Button
+            customClass1='lg:w-[80px] w-[40px] lg:h-[70px] h-[40px] bg-[#8840FF]'
+            customClass2='lg:w-[74px] w-[34px] lg:h-[64px] h-[34px] bg-[#FFFFFF]'
+          >
               <img alt="" src='assets/icons/transfer.svg'/>
           </Button>
         </div>

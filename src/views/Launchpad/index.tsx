@@ -9,10 +9,8 @@ const LaunchPad = () => {
 
             <img alt="" className="mx-auto" src="assets/intro.png"/>
             <Button className="text-white lg:text-5xl text-2xl font-bold m-auto "
-                width={window.innerWidth > 768 ? 450 : 300}
-                height={window.innerWidth > 768 ? 100 : 50}
-                bg1={"#DC104F"}
-                bg2={"#FF0B3B"}
+                customClass1="lg:w-[450px] w-[300px] lg:h-[100px] h-[50px] bg-[#DC104F]"
+                customClass2="lg:w-[444px] w-[294px] lg:h-[94px] h-[44px] bg-[#FF0B3B]"
                 mxauto
                 onClick={() => {
                     window.open(

@@ -44,9 +44,7 @@ const NFTs = () => {
     if (length === itemList.length) return;
     for (let i = 0; i < 3; i++) {
         let length = NFTItems.length;
-        console.log(length)
         if(NFTItems.length === itemList.length) break;
-        console.log('asdf')
         setNFTItems((cur: any) => [...cur, itemList[length + i]]);
     }
   };
@@ -60,12 +58,7 @@ const NFTs = () => {
   return (
     <div
       id="scrollableDiv"
-      className="h-full scrollbar pr-2 mt-10"
-      style={{
-        overflow: "auto",
-        display: "flex",
-        flexDirection: "column",
-      }}
+      className="flex flex-col overflow-auto h-[95%] scrollbar pr-2 mt-10"
     >
       <InfiniteScroll
         dataLength={NFTItems.length}
@@ -75,14 +68,14 @@ const NFTs = () => {
         scrollableTarget="scrollableDiv"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
           gap: "20px",
           height: "100%",
           overflow: "auto",
         }}
+        className="sm:grid-cols-2 xl:grid-cols-3 grid-cols-1"
       >
         {NFTItems.map((item, index) => (
-          <NFTItem key={`nft-${index}`} id={item.id} price={item.price} />
+          <NFTItem key={`nft-${index}`} id={item?.id} price={item?.price} />
         ))}
       </InfiniteScroll>
     </div>
