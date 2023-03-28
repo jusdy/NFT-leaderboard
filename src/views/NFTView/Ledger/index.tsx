@@ -66,8 +66,8 @@ const NFTs = () => {
   );
 
   const [data, setData] = useState(() => makeData(100));
-  const refreshData = () => setData(() => makeData(100));
-  console.log(refreshData)
+  // const refreshData = () => setData(() => makeData(100));
+  // console.log(refreshData)
 
   return (
     <div className=" w-full h-full overflow-auto scrollbar">

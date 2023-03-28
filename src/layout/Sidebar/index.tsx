@@ -64,7 +64,11 @@ const Sidebar = () => {
                 </div>
 
                 <div className='py-[30px] flex flex-col justify-center items-center gap-y-[15px] border-t-[3px] border-theme'>
-                    <Button bg1='#3150F2' bg2='#1271FF' className='!font-play text-white py-[10px] text-xl' height={50}>NFT Generator</Button>
+                    <Button
+                        customClass1='bg-[#3150F2] h-[50px] w-[200px]'
+                        customClass2='bg-[#1271FF] h-[44px] w-[194px]'
+                        className='!font-play text-white py-[10px] text-xl'
+                    >NFT Generator</Button>
                     <Link to={'#'} className="text-[#1271FF] underline underline-offset-8 text-2xl">How To Play</Link>
                     <Link to={'#'} className="text-[#1271FF] underline underline-offset-4 text-2xl">FAQ</Link>
                 </div>
