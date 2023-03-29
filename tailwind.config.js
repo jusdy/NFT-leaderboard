@@ -27,6 +27,32 @@ module.exports = {
 
       backgroundColor: {
         'transparent' : "transparent"
+      },
+
+      keyframes: {
+        entrance: {
+          '0%': {
+            transform: 'translateY(-100%)',
+            opacity: "0"
+          },
+          '50%': {
+            transform: 'translateY(0%)',
+            opacity: "1"
+          },
+        },
+        appear: {
+          '0%': {
+            opacity: "0"
+          },
+          '50%': {
+            opacity: "1"
+          },
+        }
+      },
+
+      animation: {
+        entrance: 'entrance 3s ease-in',
+        appear: 'appear 3s ease-in',
       }
     },
     fontFamily: {

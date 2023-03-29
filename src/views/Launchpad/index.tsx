@@ -7,10 +7,10 @@ const LaunchPad = () => {
             
             <Link className="md:hidden block text-white text-lg ml-5 font-play" to="">{"< "}Back to Main</Link>
 
-            <img alt="" className="mx-auto" src="assets/intro.png"/>
-            <Button className="text-white lg:text-5xl text-2xl font-bold m-auto "
-                customClass1="lg:w-[450px] w-[300px] lg:h-[100px] h-[50px] bg-[#DC104F]"
-                customClass2="lg:w-[444px] w-[294px] lg:h-[94px] h-[44px] bg-[#FF0B3B]"
+            <img alt="" className="mx-auto animate-entrance" src="assets/intro.png"/>
+            <Button className="text-white lg:text-5xl text-2xl font-bold m-auto animate-appear"
+                customClass1="lg:w-[450px] w-[300px] lg:h-[100px] h-[50px] bg-[#DC104F] animate-appear"
+                customClass2="lg:w-[444px] w-[294px] lg:h-[94px] h-[44px] bg-[#FF0B3B] animate-appear"
                 mxauto
                 onClick={() => {
                     window.open(
