@@ -12,7 +12,14 @@ const MyNFTs = () => {
     <div className="flex flex-col border-[3px] border-theme w-full h-full">
       <FuelPurchase isOpen={isFuelPurchase} onClose={() => setFuelPurchase(false)}></FuelPurchase>
       <div className="flex xl:flex-row flex-col w-full xl:h-[calc(100vh-150px)] h-fit xl:order-1 order-2">
-        <NFTStats onFuelClick={() => setFuelPurchase(true)}/>
+        <NFTStats onFuelClick={() => setFuelPurchase(true)}
+        position={7}
+        earning={165}
+        points={3000}
+        peakPrice={1.255}
+        peakPosition={2}
+        trophy={2}
+        />
 
         <div className="flex flex-col w-full bg-transparent xl:order-2 order-1"> {/* bg-gradient-radial from-[#264189FF] via-[#090314] to-[#090314] */}
           <div className="flex items-center md:px-[50px] px-[20px] justify-between w-full sm:h-[80px] h-[50px]">
@@ -35,9 +42,11 @@ const MyNFTs = () => {
               <PieChart value={33} title={"Speed"} />
               <PieChart value={36} title={"Acceleration"} />
               <PieChart value={16} title={"Handling"} />
-              <RarityBar/>
+              <RarityBar value={1}/>
             </div>
-            <div className="grow"></div>
+            <div className="grow mt-4 h-full">
+              <img alt='' className='m-auto w-[400px]' src={""}></img>
+            </div>
           </div>
           <ButtonBar className='xl:flex hidden'/>
         </div>

@@ -1,34 +1,47 @@
-import { useState } from 'react';
 import Button from "components/Button";
 import FuelTank from "components/FuelTank";
 import TrophyBadge from "components/TrophyBadge";
 
 interface NFTStatsType {
+    position?: number;
+    earning?: number;
+    points?: number;
+    peakPrice?: number;
+    peakPosition?: number;
+    trophy?: number;
     onFuelClick: (param: boolean) => void;
 }
 
-const NFTStats = ({onFuelClick}: NFTStatsType) => {
+const NFTStats = ({
+    position,
+    earning,
+    points,
+    peakPrice,
+    peakPosition,
+    trophy=0,
+    onFuelClick
+}: NFTStatsType) => {
     return (
         <div className="flex xl:flex-nowrap flex-wrap gap-x-8 gap-y-8 px-5 xl:flex-col flex-row xl:items-center items-start overflow-auto scrollbar shrink-0 xl:order-1 order-2 2xl:w-[290px] xl:w-[200px] w-full xl:border-r-[3px] bg-opacity-20 bg-secondary border-theme py-[50px]">
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest">Position</h1>
-            <label className="text-theme md:text-2xl text-lg font-bold">7</label>
+            <label className="text-theme md:text-2xl text-lg font-bold">{position}</label>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest">Earnings</h1>
-            <label className="text-theme md:text-2xl text-lg font-bold">165</label>
+            <label className="text-theme md:text-2xl text-lg font-bold">{earning}</label>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest">Points</h1>
-            <label className="text-theme md:text-2xl text-lg font-bold">3000</label>
+            <label className="text-theme md:text-2xl text-lg font-bold">{points}</label>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest">Peak Price</h1>
-            <label className="text-theme md:text-2xl text-lg font-bold">1.255</label>
+            <label className="text-theme md:text-2xl text-lg font-bold">{peakPrice}</label>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest">Peak Position</h1>
-            <label className="text-theme md:text-2xl text-lg font-bold">2</label>
+            <label className="text-theme md:text-2xl text-lg font-bold">{peakPosition}</label>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest mb-3">Fuel</h1>
@@ -42,7 +55,7 @@ const NFTStats = ({onFuelClick}: NFTStatsType) => {
           </div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="md:text-xl text-md tracking-widest mb-5">Trophies</h1>
-            <TrophyBadge rank={2} />
+            <TrophyBadge rank={trophy} />
           </div>
 
           <Button
