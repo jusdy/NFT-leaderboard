@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Tabs from 'components/Tabs';
 import MyNFTs from './MyNFTs';
 import NFTs from './NFTs';
-import Ledger from './Ledger';
+import LedgerTable from './Ledger';
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -25,7 +25,7 @@ const carList = [
 ]
 
 const NFTView = () => {
-    const [tabId, setTabId] = useState<number>(1);
+    const [tabId, setTabId] = useState<number>(3);
     const onTabClick = (index: number) => {
         setTabId(index);
     }
@@ -51,7 +51,7 @@ const NFTView = () => {
                 <NFTs/>
             </div>
             }
-            {tabId === 3 && <Ledger/>}
+            {tabId === 3 && <LedgerTable/>}
         </div>
     )
 }
